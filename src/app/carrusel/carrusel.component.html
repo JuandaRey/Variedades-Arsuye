@@ -1,0 +1,10 @@
+<div class="carrusel-container">
+  <img [src]="imagenes[currentIndex]" alt="Imagen del carrusel">
+  <button class="prev" (click)="prevSlide()">&#10094;</button>
+  <button class="next" (click)="nextSlide()">&#10095;</button>
+  <div class="dots">
+    <span *ngFor="let img of imagenes; let i = index"
+          [class.active]="i === currentIndex"
+          (click)="currentIndex = i"></span>
+  </div>
+</div>

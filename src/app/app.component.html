@@ -1,0 +1,41 @@
+<header>
+  <div class="logo-container">
+    <a routerLink="/home">
+      <img src="assets/Logo.png" alt="Variedades Arsuye">
+      <span class="logo-text">Variedades Arsuye</span>
+    </a>
+  </div>
+
+  <nav>
+    <ul>
+      <a class="color" style="color:#df044d" routerLink="/home" routerLinkActive="active">Inicio</a>
+      <a class="color" style="color:#df044d" routerLink="/mision-vision" routerLinkActive="active">Misión y Visión</a>
+      <a class="color" style="color:#df044d" routerLink="/productos" routerLinkActive="active">Productos</a>
+      <li class="menu-sesion">
+        <button (click)="toggleMenu()">
+          {{ nombreUsuario }}
+        </button>
+        <ul class="submenu" *ngIf="mostrarMenu">
+          <li *ngIf="!estaAutenticado">
+            <button class="color" style="color: #df044d; font-style: italic;" (click)="navegarInicioSesion()">Iniciar Sesión</button>
+          </li>
+          <li *ngIf="!estaAutenticado">
+            <button class="color" style="color: #df044d; font-style: italic;" (click)="navegarRegistro()">Registrarse</button>
+          </li>
+          <li *ngIf="estaAutenticado">
+            <button class="color" style="color: #df044d; font-style: italic;" (click)="cerrarSesion()">Cerrar Sesión</button>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <router-outlet></router-outlet>
+</main>
+
+<footer>
+  <p class="footer-text">© 2025 Variedades Arsuye</p>
+  <img src="assets/Logo.png" alt="Variedades Arsuye" height="40">
+</footer>

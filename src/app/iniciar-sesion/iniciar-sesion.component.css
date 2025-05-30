@@ -1,0 +1,171 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f0e3;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+header {
+    background-color: #fff;
+    padding: 15px 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    box-sizing: border-box;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+nav li {
+    margin-left: 15px;
+}
+
+nav li:first-child {
+    margin-left: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #555;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    background-color: #eee;
+}
+
+nav a.active {
+    color: #df044d; /* Cambiado a magenta */
+    /* Removemos cualquier sombra que pudiera estar afectando el enlace activo */
+    box-shadow: none;
+}
+
+
+.logo-container img {
+    height: 40px;
+    vertical-align: middle;
+}
+
+main.login-container {
+    background-color: #3498db;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 300px;
+    margin-top: 100px;
+    margin-bottom: 60px;
+    box-sizing: border-box; /* Asegura que padding no aumente el ancho total */
+}
+
+main.login-container h2 {
+    color: #fff;
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+.form-group {
+    margin-bottom: 10px; /* REDUCIDO: Menos espacio entre los grupos de formulario */
+}
+
+.form-group label {
+    display: block;
+    color: #fff;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 0.9em;
+    text-align: left;
+}
+
+/* MODIFICADO: Incluye input[type="email"] para que el estilo sea consistente */
+.form-group input[type="text"],
+.form-group input[type="password"],
+.form-group input[type="email"] { /* <-- AÑADIDO ESTO */
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    margin-bottom: 5px; /* REDUCIDO: Menos espacio debajo del input */
+    box-sizing: border-box;
+}
+
+.login-button {
+    background-color: #fff;
+    color: #3498db;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    width: 100%;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    box-sizing: border-box; /* Asegura que padding no aumente el ancho total */
+    margin-top: 15px; /* Añadido un poco de margen superior para separarlo del último input */
+}
+
+.login-button:hover {
+    background-color: #f0f0f0;
+}
+
+.login-options {
+    color: #fff;
+    font-size: 0.9em;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.login-options a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #ddd;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    box-sizing: border-box; /* Asegura que padding no aumente el ancho total */
+}
+
+.footer-logo img {
+    height: 30px;
+}
+
+.footer-text {
+    color: #df044d;
+    font-size: 0.9em;
+}

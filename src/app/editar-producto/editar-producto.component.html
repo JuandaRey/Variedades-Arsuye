@@ -1,0 +1,23 @@
+<h2>Editar Producto</h2>
+
+<form (ngSubmit)="guardarCambios()">
+  <label>Nombre:</label>
+  <input type="text" [(ngModel)]="producto.nombre" name="nombre" required />
+
+  <label>Descripción:</label>
+  <input type="text" [(ngModel)]="producto.descripcion" name="descripcion" required />
+
+  <label>Precio:</label>
+  <input type="number" [(ngModel)]="producto.precio" name="precio" required />
+
+  <label>Cantidad:</label>
+  <input type="number" [(ngModel)]="producto.cantidad" name="cantidad" required />
+
+  <label>Estado:</label>
+  <select [(ngModel)]="producto.estado" name="estado">
+    <option value="disponible">Disponible</option>
+    <option value="agotado">Agotado</option>
+  </select>
+
+  <button type="submit">Guardar</button>
+</form>

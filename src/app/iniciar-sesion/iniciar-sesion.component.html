@@ -1,0 +1,23 @@
+<link rel="stylesheet" href="iniciar-sesion.component.css">
+
+<main class="login-container">
+  <section class="login-form">
+    <h2>Bienvenido</h2>
+    <form (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" [(ngModel)]="usuario" name="nombre" placeholder="Ingresa tu nombre" required>
+      </div>
+      <div class="form-group">
+        <label for="contrasena">Contraseña</label>
+        <input type="password" id="contrasena" [(ngModel)]="contrasena" name="contrasena" placeholder="Ingresa tu contraseña" required>
+      </div>
+      <button type="submit" class="login-button">Iniciar Sesión</button>
+      <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+    </form>
+    <div class="login-options">
+      <span class="forgot-password"><a href="#">¿Olvidaste tu contraseña?</a></span>
+      <span class="signup-link">¿No tienes cuenta? <a href="/registro" class="active">Registrarse</a></span>
+    </div>
+  </section>
+</main>

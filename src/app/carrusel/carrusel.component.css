@@ -1,0 +1,55 @@
+.carrusel-container {
+  position: relative;
+  width: 100%; /* Ajusta el ancho según necesites */
+  max-width: 800px; /* Ancho máximo opcional */
+  margin: 20px auto; /* Centrar el carrusel */
+  overflow: hidden;
+}
+
+.carrusel-container img {
+  width: 100%;
+  display: block;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.dots {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 5px;
+}
+
+.dots span {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #bbb;
+  cursor: pointer;
+}
+
+.dots span.active {
+  background-color: #717171;
+}
